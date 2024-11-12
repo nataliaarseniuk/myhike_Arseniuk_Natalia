@@ -1,4 +1,5 @@
-var currentUser;               //points to the document of the user who is logged in
+var currentUser; 
+              //points to the document of the user who is logged in
 function populateUserInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
@@ -16,7 +17,7 @@ function populateUserInfo() {
 
                     //if the data fields are not empty, then write them in to the form.
                     if (userName != null) {
-                        document.getElementById("nameInput").value = userName;
+                        document.getElementById("fname").value = userName;
                     }
                     if (userSchool != null) {
                         document.getElementById("schoolInput").value = userSchool;
